@@ -1,0 +1,246 @@
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top, #071826, #020814 70%);
+  color: #e6f1ff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* ================= COMMON ================= */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h1 span,
+h2 span {
+  color: #22f0ff;
+}
+
+p {
+  color: #a8c7d8;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(34, 240, 255, 0.1);
+  color: #22f0ff;
+  font-size: 13px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(34, 240, 255, 0.3);
+}
+
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clock-card {
+  width: 100%;
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 32px;
+  border-radius: 22px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 30, 45, 0.85),
+    rgba(6, 18, 30, 0.85)
+  );
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(34, 240, 255, 0.15);
+  box-shadow:
+    0 0 60px rgba(34, 240, 255, 0.25),
+    inset 0 0 40px rgba(255, 255, 255, 0.03);
+}
+
+.time {
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.time span {
+  color: #eaffff;
+}
+
+.time .dot {
+  color: #22f0ff;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #7bb6c8;
+}
+
+.date {
+  margin-top: 16px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #9ddae0;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 6vw, 48px);
+  margin-top: 50px;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 20px auto 40px;
+  font-size: clamp(14px, 3.5vw, 16px);
+}
+
+/* ================= BUTTONS ================= */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn.primary {
+  background: #22f0ff;
+  color: #04151f;
+  box-shadow: 0 0 25px rgba(34, 240, 255, 0.5);
+}
+
+.btn.secondary {
+  border: 1px solid rgba(34, 240, 255, 0.4);
+  color: #22f0ff;
+}
+
+/* ================= FEATURES ================= */
+.features h2,
+.how-it-works h2 {
+  text-align: center;
+  font-size: clamp(26px, 5vw, 38px);
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 16px auto 50px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+}
+
+.feature-card {
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(8, 24, 38, 0.85);
+  border: 1px solid rgba(34, 240, 255, 0.6);
+  box-shadow: 0 0 50px rgba(34, 240, 255, 0.35);
+}
+
+/* ================= HOW IT WORKS ================= */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+/* ================= PRIVACY ================= */
+.privacy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.privacy-text ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.privacy-text li {
+  margin-bottom: 12px;
+  color: #bfefff;
+}
+
+.privacy-visual {
+  font-size: clamp(80px, 15vw, 120px);
+  text-align: center;
+  color: #22f0ff;
+  opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 70px 0 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.socials {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 20px;
+  color: #22f0ff;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .privacy-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .clock-card {
+    padding: 24px;
+  }
+}
